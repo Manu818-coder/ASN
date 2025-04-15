@@ -1,115 +1,128 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import React from "react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export default function Home() {
+const HomePage = () => {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <div className="bg-gray-50 min-h-screen text-gray-900">
+      {/* Hero Section */}
+      <section className="bg-blue-900 text-white py-16">
+        <div className="container mx-auto text-center px-4">
+          <h1 className="text-4xl font-semibold mb-4">
+            Reliable Accounting & Bookkeeping Services for Businesses of All Sizes
+          </h1>
+          <p className="text-lg mb-8">
+            Trusted by freelancers, small businesses, and corporations across the US.
+          </p>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#services"
+            className="inline-block bg-yellow-500 text-gray-900 px-6 py-3 text-xl font-semibold rounded-lg hover:bg-yellow-400"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            Get a Free Consultation
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Accounting Services Overview */}
+      <section id="services" className="py-16 bg-white">
+        <div className="container mx-auto text-center px-4">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8">
+            Our Services
+          </h2>
+
+          {/* Bookkeeping Services */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="bg-gray-200 p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                Bookkeeping Services
+              </h3>
+              <p className="text-lg text-gray-700 mb-4">
+                Keep your business finances in order with our detailed bookkeeping services.
+              </p>
+              <ul className="list-disc list-inside text-gray-700 mb-4">
+                <li>Monthly transaction recording</li>
+                <li>Bank & credit card reconciliation</li>
+                <li>Accounts payable & receivable</li>
+                <li>Payroll tracking</li>
+                <li>Financial reporting</li>
+              </ul>
+              <a
+                href="#contact"
+                className="inline-block bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800"
+              >
+                Get a Quote
+              </a>
+            </div>
+
+            {/* Accounting Services */}
+            <div className="bg-gray-200 p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                Accounting Services
+              </h3>
+              <p className="text-lg text-gray-700 mb-4">
+                Comprehensive accounting solutions to help your business thrive.
+              </p>
+              <ul className="list-disc list-inside text-gray-700 mb-4">
+                <li>Financial statement preparation</li>
+                <li>Budgeting & forecasting</li>
+                <li>Tax preparation</li>
+                <li>Compliance & advisory</li>
+                <li>Year-end close assistance</li>
+              </ul>
+              <a
+                href="#contact"
+                className="inline-block bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800"
+              >
+                Get a Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section (Optional) */}
+      <section className="py-16 bg-blue-50">
+        <div className="container mx-auto text-center px-4">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8">
+            What Our Clients Say
+          </h2>
+          <div className="flex justify-center space-x-8">
+            <div className="bg-white p-8 rounded-lg shadow-lg max-w-xs">
+              <p className="text-lg text-gray-700 mb-4">
+                "ASN Bookkeeping has been an invaluable partner to our business. Their expertise and attention to detail make our financials easier to manage."
+              </p>
+              <span className="font-semibold text-blue-900">John D., Small Business Owner</span>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-lg max-w-xs">
+              <p className="text-lg text-gray-700 mb-4">
+                "The team at ASN has helped us streamline our accounting processes. Their professionalism and customer service are top-notch."
+              </p>
+              <span className="font-semibold text-blue-900">Sarah T., Freelancer</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call-to-Action Section */}
+      <section className="bg-yellow-500 text-white py-16">
+        <div className="container mx-auto text-center px-4">
+          <h2 className="text-3xl font-semibold mb-4">Get Started Today</h2>
+          <p className="text-lg mb-8">Take control of your financial future with our expert services.</p>
+          <a
+            href="#contact"
+            className="inline-block bg-blue-900 text-white px-6 py-3 text-xl font-semibold rounded-lg hover:bg-blue-800"
+          >
+            Contact Us for a Free Consultation
+          </a>
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="container mx-auto text-center">
+          <p>&copy; 2025 ASN Bookkeeping & Accounting | All rights reserved</p>
+        </div>
       </footer>
     </div>
   );
-}
+};
+
+export default HomePage;
