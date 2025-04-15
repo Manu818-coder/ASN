@@ -87,13 +87,13 @@ const HomePage = () => {
           <div className="flex justify-center space-x-8">
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-xs">
               <p className="text-lg text-gray-700 mb-4">
-                "ASN Bookkeeping has been an invaluable partner to our business. Their expertise and attention to detail make our financials easier to manage."
+                &quot;ASN Bookkeeping has been an invaluable partner to our business. Their expertise and attention to detail make our financials easier to manage.
               </p>
               <span className="font-semibold text-blue-900">John D., Small Business Owner</span>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-xs">
               <p className="text-lg text-gray-700 mb-4">
-                "The team at ASN has helped us streamline our accounting processes. Their professionalism and customer service are top-notch."
+              &quot;The team at ASN has helped us streamline our accounting processes. Their professionalism and customer service are top-notch.
               </p>
               <span className="font-semibold text-blue-900">Sarah T., Freelancer</span>
             </div>
