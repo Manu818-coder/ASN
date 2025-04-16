@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Components/Navbar"; // Corrected import path
+import Navbar from "../components/Navbar"; // Corrected import path
 import { Link } from 'react-scroll'; // Importing Link from react-scroll
 
 const HomePage = () => {
