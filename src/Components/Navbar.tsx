@@ -1,36 +1,25 @@
-// components/Navbar.tsx
-import React from "react";
-import { Link } from "react-scroll"; // This is for smooth scrolling to sections
+import React from 'react';
+import Image from 'next/image'; // Import Image component from Next.js
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
-      <img src="/logo.png" alt="ASN Logo" className="h-16 w-auto" />
-      <div className="space-x-6">
-        <Link
-          to="services"
-          smooth={true}
-          duration={500}
-          className="text-lg font-semibold text-blue-900 hover:text-blue-700"
-        >
-          Services
-        </Link>
-        <Link
-          to="testimonials"
-          smooth={true}
-          duration={500}
-          className="text-lg font-semibold text-blue-900 hover:text-blue-700"
-        >
-          Testimonials
-        </Link>
-        <Link
-          to="contact"
-          smooth={true}
-          duration={500}
-          className="text-lg font-semibold text-blue-900 hover:text-blue-700"
-        >
-          Contact
-        </Link>
+    <nav>
+      <div>
+        {/* Use Next.js Image component here */}
+        <Image 
+          src="/path/to/logo.png" 
+          alt="Logo" 
+          width={100} 
+          height={100} 
+        />
+      </div>
+      <div>
+        {/* Navbar content */}
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
       </div>
     </nav>
   );
