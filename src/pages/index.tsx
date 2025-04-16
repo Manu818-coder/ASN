@@ -1,8 +1,16 @@
 import React from "react";
+import Navbar from "../Components/Navbar"; // Corrected import path
+import { Link } from 'react-scroll'; // Importing Link from react-scroll
 
 const HomePage = () => {
   return (
     <div className="bg-gray-50 min-h-screen text-gray-900">
+      <Navbar />  {/* Add the Navbar component here */}
+
+      <header className="bg-white shadow-md py-4 px-6 flex items-center">
+        <span className="ml-3 text-xl font-bold text-blue-900">ASN Bookkeeping</span>
+      </header>
+
       {/* Hero Section */}
       <section className="bg-blue-900 text-white py-16">
         <div className="container mx-auto text-center px-4">
@@ -12,12 +20,15 @@ const HomePage = () => {
           <p className="text-lg mb-8">
             Trusted by freelancers, small businesses, and corporations across the US.
           </p>
-          <a
-            href="#services"
+          {/* Smooth scrolling to services section */}
+          <Link
+            to="services"
+            smooth={true}
+            duration={500} // Optional: duration of scroll in ms
             className="inline-block bg-yellow-500 text-gray-900 px-6 py-3 text-xl font-semibold rounded-lg hover:bg-yellow-400"
           >
             Get a Free Consultation
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -44,12 +55,15 @@ const HomePage = () => {
                 <li>Payroll tracking</li>
                 <li>Financial reporting</li>
               </ul>
-              <a
-                href="#contact"
+              {/* Smooth scrolling to contact section */}
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
                 className="inline-block bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800"
               >
                 Get a Quote
-              </a>
+              </Link>
             </div>
 
             {/* Accounting Services */}
@@ -67,12 +81,15 @@ const HomePage = () => {
                 <li>Compliance & advisory</li>
                 <li>Year-end close assistance</li>
               </ul>
-              <a
-                href="#contact"
+              {/* Smooth scrolling to contact section */}
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
                 className="inline-block bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800"
               >
                 Get a Quote
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -87,13 +104,13 @@ const HomePage = () => {
           <div className="flex justify-center space-x-8">
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-xs">
               <p className="text-lg text-gray-700 mb-4">
-                &quot;ASN Bookkeeping has been an invaluable partner to our business. Their expertise and attention to detail make our financials easier to manage.
+                &quot;ASN Bookkeeping has been an invaluable partner to our business. Their expertise and attention to detail make our financials easier to manage."
               </p>
               <span className="font-semibold text-blue-900">John D., Small Business Owner</span>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-xs">
               <p className="text-lg text-gray-700 mb-4">
-              &quot;The team at ASN has helped us streamline our accounting processes. Their professionalism and customer service are top-notch.
+                &quot;The team at ASN has helped us streamline our accounting processes. Their professionalism and customer service are top-notch."
               </p>
               <span className="font-semibold text-blue-900">Sarah T., Freelancer</span>
             </div>
@@ -106,12 +123,15 @@ const HomePage = () => {
         <div className="container mx-auto text-center px-4">
           <h2 className="text-3xl font-semibold mb-4">Get Started Today</h2>
           <p className="text-lg mb-8">Take control of your financial future with our expert services.</p>
-          <a
-            href="#contact"
+          {/* Smooth scrolling to contact section */}
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
             className="inline-block bg-blue-900 text-white px-6 py-3 text-xl font-semibold rounded-lg hover:bg-blue-800"
           >
             Contact Us for a Free Consultation
-          </a>
+          </Link>
         </div>
       </section>
 
