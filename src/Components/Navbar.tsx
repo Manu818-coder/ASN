@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image'; // Import Image component from Next.js
+import Link from 'next/link'; // Import Link component from Next.js
 
 const Navbar = () => {
   return (
@@ -16,9 +17,9 @@ const Navbar = () => {
       <div>
         {/* Navbar content */}
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><Link href="/">Home</Link></li>  {/* Use Link component here */}
+          <li><Link href="/about">About</Link></li>  {/* Use Link component here */}
+          <li><Link href="/contact">Contact</Link></li>  {/* Use Link component here */}
         </ul>
       </div>
     </nav>
